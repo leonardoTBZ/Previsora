@@ -1,0 +1,254 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "poppins";
+    color: #fff;
+  }
+  
+  input#email {
+    background: bottom;
+    color: #fff;
+}
+input#password {
+  background: bottom;
+  color: #fff;
+}
+  
+  .container {
+    height: 150vh;
+    background-image: url("https://edificioprevisora.com/wp-content/uploads/2022/02/PREVISORA-FONDO.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    ;
+  }
+  .logoblanco{
+    align-items: center;
+    width: 150px;
+    filter: invert(100%);
+    display:block;
+    margin:auto;
+  }
+  .modal {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+  }
+  .modal-container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 0.3s;
+    background: #8F000B;
+    transform: translateY(100px) scale(0.4);
+    height: 500px 
+  }
+  .modal-title {
+    font-size: 40px;
+    margin: 0;
+    font-weight: 400;
+    color: #fff;
+    text-align:center;
+  }
+  .modal-desc {
+    margin: 6px 0 30px 0;
+  }
+  .modal-left {
+    padding: 50px 30px 20px;
+    background: #C73232;
+    flex: 1.5;
+    transition-duration: 0.5s;
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  .modal-button {
+    color: #C73232;
+    font-family: "Poppins";
+    font-size: 18px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    padding: 10px 40px;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
+    transition: 0.3s;
+  }
+  .modal-button:hover {
+    border-color: rgba(197, 197, 197, 0.2);
+    background: #C73232;
+    color: #fff;
+  }
+  .modal-right {
+    flex: 2;
+    font-size: 0;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  .modal-right video {
+    width: 31%;
+    height: auto;
+    position: absolute;
+    margin-left: 9%;
+    margin-top: 127px;
+    transform: scale(2);
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition-duration: 1.2s;
+    display:block;
+ ;
+  }
+  .modal.is-open {
+    height: 100%;
+    background: rgba(51, 51, 51, 0.85);
+  }
+  .modal.is-open .modal-button {
+    opacity: 0;
+  }
+  .modal.is-open .modal-container {
+    opacity: 1;
+    transition-duration: 0.6s;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+  .modal.is-open .modal-right img {
+    transform: scale(1);
+  }
+  .modal.is-open .modal-left {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.1s;
+  }
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-buttons a {
+    color:#fff;
+    font-size: 14px;
+  }
+  .sign-up {
+    margin: 60px 0 0;
+    font-size: 14px;
+    text-align: center;
+    color: #ccc;
+  }
+  .sign-up a {
+    color: #000000
+  }
+  
+  .input-button {
+    padding: 8px 12px;
+    outline: none;
+    border: 0;
+    color: #8F000B;
+    border-radius: 4px;
+    background: #fff;
+    font-family: "poppins";
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .input-button:hover {
+    background: #8F000B;
+    color: #fff;
+  }
+  
+  .input-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: "poppins";
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  .input-block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+  }
+  .input-block input {
+    outline: 0;
+    border: 0;
+    padding: 4px 0 0;
+    font-size: 14px;
+    font-family: "poppins";;
+  }
+  .input-block input::-moz-placeholder {
+    color: #ccc;
+    opacity: 1;
+  }
+  .input-block input:-ms-input-placeholder {
+    color: #ccc;
+    opacity: 1;
+  }
+  .input-block input::placeholder {
+    color: #ccc;
+    opacity: 1;
+  }
+  .input-block:focus-within {
+    border-color: #8c7569;
+  }
+  .input-block:focus-within .input-label {
+    color: rgba(140, 117, 105, 0.8);
+  }
+  
+  .icon-button {
+    outline: 0;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    background: 0;
+    padding: 0;
+    cursor: pointer;
+    filter: invert(100%)
+  }
+  
+  .scroll-down {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color:#8F000B;
+    font-size: 32px;
+    font-weight: 800;
+    transform: translate(-50%, -50%);
+  }
+  .scroll-down svg {
+    margin-top: 16px;
+    width: 52px;
+    fill: currentColor;
+  }
+
+  @media only screen and (max-width: 844px){
+    .modal-right {
+      display: none;
+    }}
